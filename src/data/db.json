@@ -1,0 +1,166 @@
+{
+  "builderData": {
+    "cameras": [
+      {
+        "id": "wyze-cam-v4",
+        "category": "CAMERAS",
+        "title": "Wyze Cam v4",
+        "description": "The clearest Wyze Cam ever made.",
+        "learnMoreUrl": "#",
+        "discountPercentage": 22,
+        "basePrice": 35.98,
+        "discountedPrice": 27.98,
+        "variants": [
+          {
+            "id": "white",
+            "name": "White",
+            "thumbnail": "/images/cam-v4-white.png"
+          },
+          {
+            "id": "grey",
+            "name": "Grey",
+            "thumbnail": "/images/cam-v4-grey.png"
+          },
+          {
+            "id": "black",
+            "name": "Black",
+            "thumbnail": "/images/cam-v4-black.png"
+          }
+        ]
+      },
+      {
+        "id": "wyze-cam-pan-v3",
+        "category": "CAMERAS",
+        "title": "Wyze Cam Pan v3",
+        "description": "360° pan and 180° tilt security camera.",
+        "learnMoreUrl": "#",
+        "discountPercentage": 12,
+        "basePrice": 39.98,
+        "discountedPrice": 34.98,
+        "variants": [
+          {
+            "id": "white",
+            "name": "White",
+            "thumbnail": "/images/pan-v3-white.png"
+          },
+          {
+            "id": "black",
+            "name": "Black",
+            "thumbnail": "/images/pan-v3-black.png"
+          }
+        ]
+      },
+      {
+        "id": "wyze-cam-floodlight-v2",
+        "category": "CAMERAS",
+        "title": "Wyze Cam Floodlight v2",
+        "description": "2K floodlight camera with a 160° wide-angle view for your garage.",
+        "learnMoreUrl": "#",
+        "discountPercentage": 22,
+        "basePrice": 89.98,
+        "discountedPrice": 69.98,
+        "variants": [
+          {
+            "id": "white",
+            "name": "White",
+            "thumbnail": "/images/floodlight-white.png"
+          },
+          {
+            "id": "black",
+            "name": "Black",
+            "thumbnail": "/images/floodlight-black.png"
+          }
+        ]
+      },
+      {
+        "id": "wyze-duo-cam-doorbell",
+        "category": "CAMERAS",
+        "title": "Wyze Duo Cam Doorbell",
+        "description": "Two cameras. Two views. Double the porch protection.",
+        "learnMoreUrl": "#",
+        "basePrice": 69.98,
+        "defaultThumbnail": "/images/doorbell.png"
+      },
+      {
+        "id": "wyze-battery-cam-pro",
+        "category": "CAMERAS",
+        "title": "Wyze Battery Cam Pro",
+        "description": "Protect anywhere. See everything in 2.5K HDR. No power outlet or electrician needed.",
+        "learnMoreUrl": "#",
+        "basePrice": 89.98,
+        "variants": [
+          {
+            "id": "white",
+            "name": "White",
+            "thumbnail": "/images/battery-cam-white.png"
+          },
+          {
+            "id": "black",
+            "name": "Black",
+            "thumbnail": "/images/battery-cam-black.png"
+          }
+        ]
+      }
+    ],
+    "plans": [
+      {
+        "id": "cam-unlimited",
+        "category": "HOME MONITORING PLAN",
+        "title": "Cam Unlimited",
+        "basePrice": 12.99,
+        "discountedPrice": 9.99,
+        "isSubscription": true,
+        "defaultThumbnail": "/images/plan-shield.png"
+      }
+    ],
+    "sensors": [
+      {
+        "id": "wyze-sense-motion-sensor",
+        "category": "SENSORS",
+        "title": "Wyze Sense Motion Sensor",
+        "basePrice": 29.99,
+        "defaultThumbnail": "/images/motion-sensor.png"
+      },
+      {
+        "id": "wyze-sense-hub",
+        "category": "SENSORS",
+        "title": "Wyze Sense Hub (Required)",
+        "basePrice": 29.92,
+        "discountedPrice": 0,
+        "isFree": true,
+        "defaultThumbnail": "/images/sense-hub.png"
+      }
+    ],
+    "protection": [
+      {
+        "id": "wyze-microsd-256",
+        "category": "ACCESSORIES",
+        "title": "Wyze MicroSD Card (256GB)",
+        "basePrice": 20.98,
+        "defaultThumbnail": "/images/sd-card.png"
+      },
+      {
+        "id": "wyze-extended-warranty",
+        "category": "EXTRA PROTECTION",
+        "title": "Wyze Extended Warranty",
+        "description": "Add an extra year of warranty coverage to your security bundle for complete peace of mind.",
+        "learnMoreUrl": "#",
+        "basePrice": 19.99,
+        "defaultThumbnail": "/images/protection-shield.png"
+      }
+    ]
+  },
+  "cart": [
+    { "productId": "wyze-cam-v4", "variantId": "white", "quantity": 1 },
+    { "productId": "wyze-cam-pan-v3", "variantId": "white", "quantity": 2 },
+    { "productId": "cam-unlimited", "variantId": null, "quantity": 1 },
+    {
+      "productId": "wyze-sense-motion-sensor",
+      "variantId": null,
+      "quantity": 2
+    },
+    { "productId": "wyze-sense-hub", "variantId": null, "quantity": 1 },
+    { "productId": "wyze-microsd-256", "variantId": null, "quantity": 2 },
+    { "productId": "wyze-extended-warranty", "variantId": null, "quantity": 1 }
+  ]
+}
