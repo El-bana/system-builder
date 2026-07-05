@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+.pnp/
+.pnp.js
+
+#Eslint Cache
+.eslintcache
+
+#Prettier Cache
+.prettiercache
+
+# Yarn Cache
+.yarn/
+
+# Production Build Output
+dist/
+
+# Vite Cache
+.vite/
+
+# System / IDE Files
+.DS_Store
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
