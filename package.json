@@ -4,8 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev:api": "node --watch backend/server.js",
+    "dev:ui": "vite",
+    "dev": "concurrently \"npm run dev:api\" \"npm run dev:ui\"",
     "build": "tsc -b && vite build",
+    "start": "node backend/server.js",
     "lint": "eslint .",
     "preview": "vite preview",
     "prepare": "husky"
@@ -13,6 +16,7 @@
   "dependencies": {
     "@base-ui/react": "^1.6.0",
     "@tailwindcss/vite": "^4.3.2",
+    "dotenv": "^17.4.2",
     "lucide-react": "^1.23.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
