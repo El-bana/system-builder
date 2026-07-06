@@ -1,6 +1,6 @@
 import { NumberField } from "@base-ui/react/number-field";
 import { cva, type VariantProps } from "class-variance-authority";
-import { Minus, Plus } from "lucide-react";
+import { MinusIcon, PlusIcon } from "../icons";
 
 // I have two variants here because the one in the review section is different from the catalog one
 // in colors and other things
@@ -58,13 +58,13 @@ export function QuantityStepper({
     >
       <NumberField.Group className="flex items-center gap-1.5">
         <NumberField.Decrement className={stepperBtn({ variant })}>
-          <Minus size={8} strokeWidth={2.5} />
+          <MinusIcon size={8} />
         </NumberField.Decrement>
 
         <NumberField.Input className={stepperInput({ variant })} />
 
         <NumberField.Increment className={stepperBtn({ variant })}>
-          <Plus size={8} strokeWidth={2.5} />
+          <PlusIcon size={8} />
         </NumberField.Increment>
       </NumberField.Group>
     </NumberField.Root>
