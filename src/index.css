@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+@import "./styles/typography.css";
+
+@theme {
+  --color-white: #ffffff;
+  --color-gray-50: #f0f4f7;
+  --color-gray-100: #f1f1f2;
+  --color-gray-200: #e6ebf0;
+  --color-gray-300: #ced6de;
+  --color-gray-500: #575757;
+  --color-gray-600: #525963;
+  --color-gray-950: #0b0d10;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gilroy", sans-serif;
+  color: var(--color-gray-950);
+}
