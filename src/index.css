@@ -16,6 +16,10 @@
   --color-slate-500: #6f7882;
   --color-purple-600: #4e2fd2;
   --color-blue-50: #edf4ff;
+  --color-teal-400: #1df0bb;
+  --color-teal-600: #0aa288;
+  --color-link-blue: #0000ee;
+  --color-red-500: #d8392b;
 }
 
 * {
