@@ -1,4 +1,4 @@
-import { type IconProps } from "../../types/general";
+import { type IconProps } from "./";
 
 export function CameraIcon({ size = 26, ...props }: IconProps) {
   return (

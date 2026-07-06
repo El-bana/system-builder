@@ -1,4 +1,4 @@
-import { type IconProps } from "../../types/general";
+import { type IconProps } from "./";
 
 export function MinusIcon({ size = 8, ...props }: IconProps) {
   return (

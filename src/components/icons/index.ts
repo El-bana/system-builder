@@ -1,4 +1,4 @@
-export * from "../../types/general";
+export * from "./";
 export * from "./CameraIcon";
 export * from "./ChevronDownIcon";
 export * from "./MinusIcon";
