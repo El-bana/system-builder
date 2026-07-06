@@ -14,17 +14,17 @@
           {
             "id": "white",
             "name": "White",
-            "thumbnail": "/images/cam-v4-white.png"
+            "thumbnail": "/images/cameras/cam-v4-white.png"
           },
           {
             "id": "grey",
             "name": "Grey",
-            "thumbnail": "/images/cam-v4-grey.png"
+            "thumbnail": "/images/cameras/cam-v4-grey.png"
           },
           {
             "id": "black",
             "name": "Black",
-            "thumbnail": "/images/cam-v4-black.png"
+            "thumbnail": "/images/cameras/cam-v4-black.png"
           }
         ]
       },
@@ -41,12 +41,12 @@
           {
             "id": "white",
             "name": "White",
-            "thumbnail": "/images/pan-v3-white.png"
+            "thumbnail": "/images/cameras/pan-v3-white.png"
           },
           {
             "id": "black",
             "name": "Black",
-            "thumbnail": "/images/pan-v3-black.png"
+            "thumbnail": "/images/cameras/pan-v3-black.png"
           }
         ]
       },
@@ -63,12 +63,12 @@
           {
             "id": "white",
             "name": "White",
-            "thumbnail": "/images/floodlight-white.png"
+            "thumbnail": "/images/cameras/floodlight-white.png"
           },
           {
             "id": "black",
             "name": "Black",
-            "thumbnail": "/images/floodlight-black.png"
+            "thumbnail": "/images/cameras/floodlight-black.png"
           }
         ]
       },
@@ -79,7 +79,7 @@
         "description": "Two cameras. Two views. Double the porch protection.",
         "learnMoreUrl": "#",
         "basePrice": 69.98,
-        "defaultThumbnail": "/images/doorbell.png"
+        "defaultThumbnail": "/images/cameras/doorbell.png"
       },
       {
         "id": "wyze-battery-cam-pro",
@@ -92,12 +92,12 @@
           {
             "id": "white",
             "name": "White",
-            "thumbnail": "/images/battery-cam-white.png"
+            "thumbnail": "/images/cameras/battery-cam-white.png"
           },
           {
             "id": "black",
             "name": "Black",
-            "thumbnail": "/images/battery-cam-black.png"
+            "thumbnail": "/images/cameras/battery-cam-black.png"
           }
         ]
       }
@@ -110,7 +110,7 @@
         "basePrice": 12.99,
         "discountedPrice": 9.99,
         "isSubscription": true,
-        "defaultThumbnail": "/images/plan-shield.png"
+        "defaultThumbnail": "/images/plans/plan-shield.png"
       }
     ],
     "sensors": [
@@ -119,7 +119,7 @@
         "category": "SENSORS",
         "title": "Wyze Sense Motion Sensor",
         "basePrice": 29.99,
-        "defaultThumbnail": "/images/motion-sensor.png"
+        "defaultThumbnail": "/images/sensors/motion-sensor.png"
       },
       {
         "id": "wyze-sense-hub",
@@ -128,7 +128,7 @@
         "basePrice": 29.92,
         "discountedPrice": 0,
         "isFree": true,
-        "defaultThumbnail": "/images/sense-hub.png"
+        "defaultThumbnail": "/images/sensors/sense-hub.png"
       }
     ],
     "protection": [
@@ -137,7 +137,7 @@
         "category": "ACCESSORIES",
         "title": "Wyze MicroSD Card (256GB)",
         "basePrice": 20.98,
-        "defaultThumbnail": "/images/sd-card.png"
+        "defaultThumbnail": "/images/accessories/sd-card.png"
       },
       {
         "id": "wyze-extended-warranty",
@@ -146,7 +146,7 @@
         "description": "Add an extra year of warranty coverage to your security bundle for complete peace of mind.",
         "learnMoreUrl": "#",
         "basePrice": 19.99,
-        "defaultThumbnail": "/images/protection-shield.png"
+        "defaultThumbnail": "/images/accessories/protection-shield.png"
       }
     ]
   },
