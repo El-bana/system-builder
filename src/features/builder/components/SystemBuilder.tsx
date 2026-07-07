@@ -58,7 +58,7 @@ export function SystemBuilder() {
   const [openSteps, setOpenSteps] = useState<string[]>(["cameras"]);
 
   return (
-    <div className="min-h-screen max-w-3xl">
+    <div className="w-full">
       <BuilderAccordion value={openSteps} onValueChange={setOpenSteps}>
         {BUILDER_STEP_ORDER.map((stepId, index) => {
           const config = BUILDER_STEPS[stepId];
