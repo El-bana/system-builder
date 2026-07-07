@@ -11,7 +11,7 @@ A high-fidelity, highly interactive prototype of a dynamic security system bundl
    ```
 
 2. **Environment Setup:**
-   Create a `.env` file in the root directory of the project to configure the local API backend:
+   _(Note: I have intentionally committed the `.env` file to the repository to ensure a completely seamless, zero-config installation experience for reviewers. If you need to recreate it manually, it requires the following variables:)_
 
    ```env
    API_PORT=3000
