@@ -78,6 +78,9 @@ export function useCategoryTotal(productIds: string[]) {
   });
 }
 
+const SENSE_HUB_ID = "wyze-sense-hub";
+const SENSOR_IDS = new Set(["wyze-sense-motion-sensor"]);
+
 export function setQuantity(
   productId: string,
   variantId: string | null,
@@ -95,6 +98,18 @@ export function setQuantity(
       next.push({ productId, variantId, quantity });
     } else {
       next[idx] = { ...next[idx], quantity };
+    }
+  }
+
+  // automatically add the Sense Hub when any sensor is in cart, remove when none are there
+  if (SENSOR_IDS.has(productId)) {
+    const hasSensors = next.some((item) => SENSOR_IDS.has(item.productId));
+    const hubIdx = next.findIndex((item) => item.productId === SENSE_HUB_ID);
+
+    if (hasSensors && hubIdx === -1) {
+      next.push({ productId: SENSE_HUB_ID, variantId: null, quantity: 1 });
+    } else if (!hasSensors && hubIdx !== -1) {
+      next.splice(hubIdx, 1);
     }
   }
 
