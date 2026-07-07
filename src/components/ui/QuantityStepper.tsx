@@ -39,6 +39,7 @@ interface Props {
   onValueChange: (newValue: number) => void;
   variant: StepperVariant;
   min?: number;
+  disabled?: boolean;
 }
 
 export function QuantityStepper({
@@ -46,6 +47,7 @@ export function QuantityStepper({
   onValueChange,
   variant,
   min = 0,
+  disabled,
 }: Props) {
   return (
     <NumberField.Root
@@ -56,14 +58,20 @@ export function QuantityStepper({
       aria-label="Quantity"
     >
       <NumberField.Group className="flex items-center">
-        <NumberField.Decrement className={stepperBtn({ variant })}>
+        <NumberField.Decrement
+          disabled={disabled}
+          className={stepperBtn({ variant })}
+        >
           <MinusIcon size={8} />
         </NumberField.Decrement>
 
-        <NumberField.Input className="sr-only" />
+        <NumberField.Input disabled={disabled} className="sr-only" />
         <span className={stepperValue({ variant })}>{value}</span>
 
-        <NumberField.Increment className={stepperBtn({ variant })}>
+        <NumberField.Increment
+          disabled={disabled}
+          className={stepperBtn({ variant })}
+        >
           <PlusIcon size={8} />
         </NumberField.Increment>
       </NumberField.Group>
