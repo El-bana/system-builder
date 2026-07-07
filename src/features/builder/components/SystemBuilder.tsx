@@ -78,7 +78,7 @@ export function SystemBuilder() {
               nextStepTitle={nextStepTitle}
               onNext={nextStepId ? () => setOpenSteps([nextStepId]) : undefined}
             >
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {products.map((product) => (
                   <ProductCard key={product.id} product={product} />
                 ))}

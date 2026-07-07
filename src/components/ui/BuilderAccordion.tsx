@@ -56,7 +56,7 @@ export function BuilderStep({
             Step {stepNumber} of {totalSteps}
           </span>
 
-          <div className="flex w-full items-center justify-between px-3.75 py-5 border-y-[0.5px] border-gray-900 transition-colors duration-300 group-data-open/item:border-b-transparent">
+          <div className="flex w-full items-center justify-between px-3.75 py-5 border-y-[0.5px] border-gray-900 transition-colors duration-300 group-data-open/item:border-b-transparent group-data-open/item:pb-3.75">
             <div className="flex items-center gap-2">
               <div className="text-slate-500 w-6.5 h-6.5 flex items-center justify-center shrink-0">
                 {icon}
@@ -80,7 +80,7 @@ export function BuilderStep({
         </Accordion.Trigger>
       </Accordion.Header>
       <Accordion.Panel className="h-(--accordion-panel-height) overflow-hidden transition-[height] duration-300 ease-out data-ending-style:h-0 data-starting-style:h-0">
-        <div className="px-3.75 pt-2">{children}</div>
+        <div className="px-3.75">{children}</div>
       </Accordion.Panel>
     </Accordion.Item>
   );
