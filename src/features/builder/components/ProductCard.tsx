@@ -96,16 +96,29 @@ export function ProductCard({ product }: ProductCardProps) {
           </div>
         )}
 
-        <div className="mt-auto pt-4 flex items-end justify-between">
-          <QuantityStepper
-            value={quantity}
-            onValueChange={(val) =>
-              setQuantity(product.id, selectedVariant ?? null, val)
-            }
-            variant="catalog"
-          />
+        <div className="pt-2.5 flex items-center justify-between">
+          {product.id === "wyze-sense-hub" ? (
+            <QuantityStepper
+              disabled
+              value={quantity}
+              onValueChange={(val) =>
+                setQuantity(product.id, selectedVariant ?? null, val)
+              }
+              variant="catalog"
+            />
+          ) : (
+            product.category !== "PLAN" && (
+              <QuantityStepper
+                value={quantity}
+                onValueChange={(val) =>
+                  setQuantity(product.id, selectedVariant ?? null, val)
+                }
+                variant="catalog"
+              />
+            )
+          )}
 
-          <div className="flex flex-col items-end gap-0.75">
+          <div className="flex flex-col items-end">
             {hasDiscount ? (
               <>
                 <span className="text-red-500 line-through text-[16px] font-normal">
