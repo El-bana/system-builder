@@ -6,7 +6,7 @@ import {
   SensorsIcon,
 } from "../components/icons";
 
-export type StepId = "cameras" | "plan" | "sensors" | "protection";
+export type StepId = "cameras" | "plans" | "sensors" | "protection";
 
 export interface StepConfig {
   id: StepId;
@@ -22,8 +22,8 @@ export const BUILDER_STEPS: Record<StepId, StepConfig> = {
     title: "Choose your cameras",
     icon: <CameraIcon />,
   },
-  plan: {
-    id: "plan",
+  plans: {
+    id: "plans",
     stepNumber: 2,
     title: "Choose your plan",
     icon: <PlanIcon />,
@@ -44,7 +44,7 @@ export const BUILDER_STEPS: Record<StepId, StepConfig> = {
 
 export const BUILDER_STEP_ORDER: StepId[] = [
   "cameras",
-  "plan",
+  "plans",
   "sensors",
   "protection",
 ];

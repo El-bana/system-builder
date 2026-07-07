@@ -1,24 +1,19 @@
+import { useState } from "react";
 import { QuantityStepper } from "../../../components/ui/QuantityStepper";
 import { cn } from "../../../lib/utils";
+import {
+  setQuantity,
+  useTotalQuantity,
+  useVariantQuantity,
+} from "../../../stores/cartStore";
 import type { Product, ProductVariant } from "../../../types";
 import { VariantSelector } from "./VariantSelector";
+
 interface ProductCardProps {
   product: Product;
-  selectedVariant?: string;
-  onVariantChange?: (variantId: string) => void;
-  quantity: number;
-  onQuantityChange: (value: number) => void;
-  totalQuantity: number;
 }
 
-export function ProductCard({
-  product,
-  selectedVariant,
-  onVariantChange,
-  quantity,
-  onQuantityChange,
-  totalQuantity,
-}: ProductCardProps) {
+export function ProductCard({ product }: ProductCardProps) {
   const {
     title,
     description,
@@ -29,6 +24,13 @@ export function ProductCard({
     variants,
     defaultThumbnail,
   } = product;
+
+  const [selectedVariant, setSelectedVariant] = useState<string | undefined>(
+    variants && variants.length > 0 ? variants[0].id : undefined,
+  );
+
+  const quantity = useVariantQuantity(product.id, selectedVariant ?? null);
+  const totalQuantity = useTotalQuantity(product.id);
 
   const activeVariantData: ProductVariant | undefined = variants?.find(
     (v) => v.id === selectedVariant,
@@ -84,23 +86,22 @@ export function ProductCard({
           )}
         </div>
 
-        {variants &&
-          variants.length > 0 &&
-          selectedVariant &&
-          onVariantChange && (
-            <div className="mt-3">
-              <VariantSelector
-                variants={variants}
-                value={selectedVariant}
-                onChange={onVariantChange}
-              />
-            </div>
-          )}
+        {variants && variants.length > 0 && selectedVariant && (
+          <div className="mt-3">
+            <VariantSelector
+              variants={variants}
+              value={selectedVariant}
+              onChange={setSelectedVariant}
+            />
+          </div>
+        )}
 
         <div className="mt-auto pt-4 flex items-end justify-between">
           <QuantityStepper
             value={quantity}
-            onValueChange={onQuantityChange}
+            onValueChange={(val) =>
+              setQuantity(product.id, selectedVariant ?? null, val)
+            }
             variant="catalog"
           />
 
