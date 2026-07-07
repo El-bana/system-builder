@@ -17,7 +17,10 @@ const db = JSON.parse(dbContent);
 app.get("/api/builder", (req, res) => {
   try {
     setTimeout(() => {
-      res.json(db.builderData);
+      res.json({
+        builderData: db.builderData,
+        initialCart: db.cart,
+      });
     }, 600);
   } catch (error) {
     res.status(500).json({ error: "Failed to read database" });
