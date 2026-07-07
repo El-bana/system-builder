@@ -8,6 +8,7 @@ import {
   setQuantity,
   subscribe,
 } from "../../../stores/cartStore";
+import { toastManager } from "../../../stores/toastStore";
 import type { CartItem, Product } from "../../../types";
 
 function ReviewItemRow({
@@ -41,6 +42,8 @@ function ReviewItemRow({
             src={imageSrc}
             alt={title}
             className="size-10.25 object-contain"
+            loading="lazy"
+            decoding="async"
           />
         )}
         <span className="text-[14px] font-medium text-gray-950">
@@ -210,6 +213,8 @@ export function ReviewPanel() {
               src="/images/shipping.png"
               alt="Fast Shipping"
               className="size-10.25 object-contain"
+              loading="lazy"
+              decoding="async"
             />
             <span className="text-[14px] font-medium text-gray-950">
               Fast Shipping
@@ -231,6 +236,8 @@ export function ReviewPanel() {
           src="/images/badge.png"
           alt="Satisfaction Guarantee"
           className="size-19.5 object-contain"
+          loading="lazy"
+          decoding="async"
         />
         <div className="flex flex-col items-end gap-1.25">
           <div className="bg-purple-600 text-white text-xs tracking-tighter font-medium px-2.25 py-px rounded-[3px]">
@@ -263,7 +270,10 @@ export function ReviewPanel() {
         onClick={(e) => {
           e.preventDefault();
           saveCartToStorage();
-          alert("Your system has been securely saved for later!");
+          toastManager.add({
+            title: "Success",
+            description: "Your system has been securely saved for later!",
+          });
         }}
         className="mt-3.75 text-center text-sm font-medium text-gray-700 underline hover:text-gray-400 bg-transparent border-none cursor-pointer w-full"
       >

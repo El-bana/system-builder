@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import { MainLayout } from "./components/layout/MainLayout";
+import { ToastProvider } from "./components/ui/Toast";
 import { ReviewPanel } from "./features/builder/components/ReviewPanel";
 import { SystemBuilder } from "./features/builder/components/SystemBuilder";
 
@@ -12,7 +13,9 @@ function App() {
         </div>
       }
     >
-      <MainLayout builder={<SystemBuilder />} review={<ReviewPanel />} />
+      <ToastProvider>
+        <MainLayout builder={<SystemBuilder />} review={<ReviewPanel />} />
+      </ToastProvider>
     </Suspense>
   );
 }
