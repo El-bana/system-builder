@@ -46,17 +46,17 @@ export function ProductCard({ product }: ProductCardProps) {
   return (
     <article
       className={cn(
-        "grid grid-cols-1 sm:grid-cols-[101px_1fr] gap-5 p-2.75 bg-white rounded-[10px] h-full border-2 transition-colors duration-200",
+        "grid grid-cols-1 lg:grid-cols-[101px_1fr] gap-5 p-2.75 bg-white rounded-[10px] h-full border-2 transition-colors duration-200",
         isSelected ? "border-purple-600/70" : "border-transparent",
       )}
     >
-      <div className="flex flex-col items-start max-sm:items-center">
-        {hasDiscount && (
-          <span className="bg-purple-600 text-white text-[12px] font-semibold px-2 py-0.5 rounded-full mb-2">
-            Save {discountPercentage}%
-          </span>
-        )}
-        <div className="w-full h-34.25 flex items-center justify-center">
+      <div className="flex flex-col items-start max-lg:items-center">
+        <div className="w-full h-34.25 flex items-center justify-center relative">
+          {hasDiscount && (
+            <span className="bg-purple-600 absolute top-0 left-0 text-white text-[12px] font-semibold px-2 py-0.5 rounded-full mb-2">
+              Save {discountPercentage}%
+            </span>
+          )}
           <img
             src={imageSrc}
             alt={title}

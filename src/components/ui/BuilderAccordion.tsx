@@ -52,22 +52,22 @@ export function BuilderStep({
     >
       <Accordion.Header className="flex">
         <Accordion.Trigger className="group flex flex-col w-full outline-none cursor-pointer">
-          <span className="text-[12px] font-medium px-3.75 text-gray-700 uppercase mb-1.25 self-start">
+          <span className="text-[12px] tracking-[1.6px] font-medium px-3.75 text-gray-700 uppercase mb-1.25 self-start">
             Step {stepNumber} of {totalSteps}
           </span>
 
           <div className="flex w-full items-center justify-between px-3.75 py-5 border-y-[0.5px] border-gray-900 transition-colors duration-300 group-data-open/item:border-b-transparent group-data-open/item:pb-3.75">
             <div className="flex items-center gap-2">
-              <div className="text-slate-500 w-6.5 h-6.5 flex items-center justify-center shrink-0">
+              <div className="text-slate-500 lg:size-6.5 size-5 flex items-center justify-center shrink-0">
                 {icon}
               </div>
-              <span className="text-[22px] font-semibold text-gray-950 leading-none">
+              <span className="text-lg lg:text-[22px] font-semibold text-gray-950 leading-none">
                 {title}
               </span>
             </div>
             <div className="flex items-center gap-3">
               {selectedCount > 0 && (
-                <span className="hidden group-data-panel-open:block  text-[14px] font-medium text-purple-600">
+                <span className="lg:hidden group-data-panel-open:block  text-[14px] font-medium text-purple-600">
                   {selectedCount} selected
                 </span>
               )}

@@ -167,15 +167,15 @@ export function ReviewPanel() {
   const totalSavings = totalBasePrice - totalDiscountedPrice;
 
   return (
-    <div className="flex flex-col p-3.75 bg-blue-50 rounded-[10px]">
-      <span className="text-[12px] font-medium text-gray-700 uppercase">
+    <div className="flex flex-col p-5 bg-blue-50 rounded-[10px]">
+      <span className="text-[12px] tracking-[1.6px] font-medium text-gray-700 uppercase">
         REVIEW
       </span>
       <div className="flex flex-col gap-1.25 mt-6.25 pb-3.75 px-1.25">
-        <h2 className="text-[22px] font-semibold text-gray-900">
+        <h2 className="text-[22px] tracking-[0.6px] font-semibold text-gray-900">
           Your security system
         </h2>
-        <p className="text-[14px] font-medium text-gray-900/75">
+        <p className="text-[14px] tracking-[0.6px] font-medium text-gray-900/75">
           Review your personalized protection system designed to keep what
           matters most safe.
         </p>
@@ -265,7 +265,7 @@ export function ReviewPanel() {
           saveCartToStorage();
           alert("Your system has been securely saved for later!");
         }}
-        className="mt-3.75 text-center text-[13px] font-medium text-gray-500 underline decoration-gray-400 underline-offset-4 hover:text-gray-700 bg-transparent border-none cursor-pointer w-full"
+        className="mt-3.75 text-center text-sm font-medium text-gray-700 underline hover:text-gray-400 bg-transparent border-none cursor-pointer w-full"
       >
         Save my system for later
       </button>
